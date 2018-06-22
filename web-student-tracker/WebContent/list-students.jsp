@@ -3,6 +3,7 @@
 <html>
 <head>
 	<title>Student Tracker App</title>
+	<link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
 
 <%
@@ -26,6 +27,15 @@
 				<th>Last Name</th>
 				<th>Email</th>			
 			</tr>
+			
+			<% for(Student tempStudent : theStudents) { %>
+				<tr>
+					<td> <%= tempStudent.getFirstName() %> </td>
+					<td> <%= tempStudent.getLastName() %> </td>
+					<td> <%= tempStudent.getEmail() %> </td>
+				</tr>
+			
+			<% } %>
 					
 			</table>
 			
