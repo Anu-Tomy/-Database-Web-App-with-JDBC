@@ -16,6 +16,11 @@
 	<div id = "container">
 		<div id = "content">
 			
+			<!-- put new button: Add Student -->
+			<input type="submit" value="Add Student" onclick="window.location.href='add-student-form.jsp'; return false;"
+			class="add-student-button" />
+			
+			<br></br>
 			<table>
 			<tr>
 				<th>First Name</th>
