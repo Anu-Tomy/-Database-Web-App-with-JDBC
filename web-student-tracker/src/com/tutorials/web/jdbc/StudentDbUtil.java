@@ -52,7 +52,7 @@ public class StudentDbUtil {
 				students.add(tempStudent);
 			}
 				
-		return students;
+			return students;
 		}
 		finally {
 			//close JDBC objects

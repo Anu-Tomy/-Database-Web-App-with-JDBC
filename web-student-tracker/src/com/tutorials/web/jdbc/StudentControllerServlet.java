@@ -3,6 +3,7 @@ package com.tutorials.web.jdbc;
 import java.io.IOException;
 import java.util.List;
 
+import javax.annotation.Resource;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -56,7 +57,7 @@ public class StudentControllerServlet extends HttpServlet {
 		}
 	}
 
-	private void listStudents(HttpServletRequest request, HttpServletResponse response) {
+	private void listStudents(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		//get students from db util
 		List<Student> students = studentDbUtil.getStudents();
@@ -68,8 +69,6 @@ public class StudentControllerServlet extends HttpServlet {
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/list-students.jsp");
 		dispatcher.forward(request, response);
-	}
-
-	
+	}	
 
 }
