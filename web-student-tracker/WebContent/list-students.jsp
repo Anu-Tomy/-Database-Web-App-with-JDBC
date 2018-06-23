@@ -21,6 +21,7 @@
 			class="add-student-button" />
 			
 			<br></br>
+			
 			<table>
 			<tr>
 				<th>First Name</th>
