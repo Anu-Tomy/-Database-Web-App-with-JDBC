@@ -23,29 +23,41 @@
 			<br></br>
 			
 			<table>
-			<tr>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Email</th>	
-				<th>Action</th>		
-			</tr>
-			
-			<c:forEach var="tempStudent" items="${STUDENT_LIST}">
-			
-			<!-- set up a link for each student -->
-			<c:url var="tempLink" value="StudentControllerServlet">
-			<c:param name="command" value="LOAD" />
-			<c:param name="studentId" value="${tempStudent.id}" />
-			</c:url>
-			
 				<tr>
-					<td> ${tempStudent.firstName} </td>
-					<td> ${tempStudent.lastName} </td>
-					<td> ${tempStudent.email} </td>
-					<td> <a href="${tempLink}">Update</a> </td>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email</th>	
+					<th>Action</th>		
 				</tr>
-			
-			</c:forEach>
+				
+				<c:forEach var="tempStudent" items="${STUDENT_LIST}">
+				
+				<!-- set up a link for each student -->
+				
+					<!-- set up a link to update a student -->
+					<c:url var="tempLink" value="StudentControllerServlet">
+					<c:param name="command" value="LOAD" />
+					<c:param name="studentId" value="${tempStudent.id}" />
+					</c:url>
+					
+					<!-- set up a link to delete a student -->
+					<c:url var="deleteLink" value="StudentControllerServlet">
+					<c:param name="command" value="DELETE" />
+					<c:param name="studentId" value="${tempStudent.id}" />
+					</c:url>
+					
+							
+					<tr>
+						<td> ${tempStudent.firstName} </td>
+						<td> ${tempStudent.lastName} </td>
+						<td> ${tempStudent.email} </td>
+						<td> <a href="${tempLink}">Update</a>
+						|
+						<a href="${deleteLink}">Delete</a> </td>
+						
+					</tr>
+				
+				</c:forEach>
 					
 			</table>
 			
