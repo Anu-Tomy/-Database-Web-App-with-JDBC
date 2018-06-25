@@ -126,6 +126,9 @@ public class StudentDbUtil {
 			String sql = "select * from student where id=?";
 			
 			//create prepared statement
+			myStmt= myConn.prepareStatement(sql);
+			
+			//set params
 			myStmt.setInt(1,studentId);
 			
 			//execute statement
