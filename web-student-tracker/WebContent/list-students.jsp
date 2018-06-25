@@ -44,8 +44,7 @@
 					<c:url var="deleteLink" value="StudentControllerServlet">
 					<c:param name="command" value="DELETE" />
 					<c:param name="studentId" value="${tempStudent.id}" />
-					</c:url>
-					
+					</c:url>					
 							
 					<tr>
 						<td> ${tempStudent.firstName} </td>
@@ -56,18 +55,12 @@
 						<a href="${deleteLink}"  
 						onclick="if (!(confirm('Are you sure you want to delete this student?'))) return false">   <!-- JavaScript code to get Confirm Box -->
 						Delete</a> 
-						
-						</td>
-						
-					</tr>
-				
-				</c:forEach>
-					
-			</table>
-			
+						</td>						
+					</tr>				
+				</c:forEach>					
+			</table>			
 		</div>
-	</div>
-		
+	</div>		
 
 </body>
 </html>
